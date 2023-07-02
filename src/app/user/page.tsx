@@ -16,9 +16,7 @@ const getUser=async(token:string)=>{
             headers:{
                 Authorization: `Bearer ${token}`
             },
-            next: {
-                revalidate: 0
-            },
+           cache:"no-store"
         })
         return response
     }catch(err: unknown){

@@ -4,7 +4,6 @@ import Logo from "../logo/logo"
 import { getData } from "@/uteis/api"
 import { cookies } from "next/headers"
 import NavHeader from "./navHeader"
-import { redirect } from "next/navigation"
 
 const getUserToken=async()=>{
     try{

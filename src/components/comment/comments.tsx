@@ -5,7 +5,8 @@ import { getData } from "@/uteis/api"
 import { TCommentRes, TComments } from "@/schemas/comment.schema"
 import { cookies } from "next/headers"
 import { CommentInput } from "./commentForm"
-import Link from "next/link"
+import { redirect } from "next/navigation"
+
 
 const getComments = async(postId: string, token:string | undefined) => {
     try{
@@ -13,9 +14,7 @@ const getComments = async(postId: string, token:string | undefined) => {
             headers:{
                 Authorization: `Bearer ${token}`
             },
-            next: {
-                revalidate: 30
-            }
+            next:{ revalidate: 0}
         })
 
         return response
@@ -24,41 +23,30 @@ const getComments = async(postId: string, token:string | undefined) => {
     }
 }
 
+
 const Comments = async({postId}:{postId: string}) => {
     const token = cookies().get("userToken")
+    !token && redirect('/login')
     const comments: TCommentRes = await getComments(postId, token?.value)
-
-    if(!token){
-        return (
-            <section className="comments">
-                <PageCard>
-                    <h3>Comentários</h3>
-                    <p>
-                        <Link href="/login">Efetue o login</Link> para ver os comentários deste veículo
-                    </p>
-                </PageCard>
-            </section>
-        )
-    }
+    
     return(
         <section className="comments">
             <PageCard>
                 <h3>Comentários</h3>
                 {
-                    (!token || !comments.postComments) ?
+                    (!comments.postComments) ?
                     <p>nenhum comentario</p>:
                     (
                         <ul>
                             {
-                                comments.postComments.map((comment: TComments) =><Comment comment={comment}/>)
+                                comments.postComments.map((comment: TComments) =><Comment key={comment.id} comment={comment}/>)
                             }
                         </ul>
                     )
                 }
-                {}
             </PageCard>
             <PageCard>
-                <CommentInput postId={postId}/>
+                <CommentInput  postId={postId}/>
             </PageCard>
         </section>
     )

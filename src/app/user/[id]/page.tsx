@@ -10,7 +10,6 @@ import CarsList from "@/components/cardsList/cardsList"
 import { CardsLoading } from "@/components/loadings/cardsLoading/cardsLoading"
 import { redirect } from "next/navigation"
 
-
 const getUserLogged=async(token:string)=>{
     try{
         const response=await getData("/users/loggedUser",{
@@ -38,7 +37,7 @@ const Profile = async({params}:{params:any}) =>{
     const {id}=params
     const cookieStore = cookies()
     const userToken= cookieStore.get("userToken")
-    // !userToken && redirect("/login")
+    !userToken && redirect("/login")
     const profile:TUser=await getUserLogged(userToken!.value)
 
     const advertiser=await getAdvertiser(id)

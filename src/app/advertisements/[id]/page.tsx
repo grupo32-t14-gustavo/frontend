@@ -1,6 +1,5 @@
 import { TAdvertisementRes } from "@/schemas/advertisement.schema"
 import { getData } from "@/uteis/api"
-import { cache } from "react"
 import "../../../styles/pages/advertisement/advertisement.sass"
 import HeaderProfile from "@/components/headerProfile/header"
 import AdvertisementInfo from "@/components/advertisementInfo/advertisementInfo"

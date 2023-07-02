@@ -9,13 +9,13 @@ import { Suspense } from "react"
 import CarsHome from "@/components/cardsList/carsHome"
 import { HomePageLoading } from "@/components/loadings/homePageLoading/homePageLoading"
 
-const getUser=()=>{
-  const userToken=cookies().get("userToken")
-  return userToken
-}
-
 const Home = async({searchParams}: iFilterListProps) => {
-  const userToken=getUser()
+
+  async function getToken(){
+    const userToken = cookies().get('userToken')?.value
+    return userToken
+  }
+  const userToken=await getToken()
 
   return (
     <>
