@@ -19,7 +19,7 @@
 * [Deploy do FrontEnd](https://motors-shop-frontend-theta.vercel.app/).
   
 * [Repositório do BackEnd](https://github.com/grupo32-t14-gustavo/backend).
-* [Documentação da API](https://github.com/grupo32-t14-gustavo/backend).
+* [Documentação da API](https://motorsshop-w0l3.onrender.com/doc/).
 * [Deploy da API](https://motorsshop-w0l3.onrender.com).
 
 # Motors Shop
