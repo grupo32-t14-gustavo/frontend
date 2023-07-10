@@ -107,6 +107,6 @@ O back-end do projeto agora deve estar disponível na porta escolhida em seu .en
   
   <td align="center"><a href="https://github.com/jamilylima" title="GitHub"><img style="border-radius: 50%;" src="https://github.com/jamilylima.png" width="75px;" alt=""/><br /><sub><b>Jamily Lima</b></sub></a><br /><a href="https://www.linkedin.com/in/jamilylima/" title="Linkedin"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white"></a></td>
   
-  <td align="center"><a href="https://github.com/felipedsalmeida" title="GitHub"><img style="border-radius: 50%;" src="https://github.com/felipedsalmeida.png" width="75px;" alt=""/><br /><sub><b>Felipe Almeida</b></sub></a><br /><a href="" title="Linkedin"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white"></a></td>
+  <td align="center"><a href="https://github.com/felipedsalmeida" title="GitHub"><img style="border-radius: 50%;" src="https://github.com/felipedsalmeida.png" width="75px;" alt=""/><br /><sub><b>Felipe Almeida</b></sub></a><br /><a href="https://www.linkedin.com/in/felipedsalmeida/" title="Linkedin"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white"></a></td>
   </tr>
 </table>
